@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Software Engineering | Decision Spinner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="main.css" rel="stylesheet">
+    <script src="savingData.js"></script>
+    <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-container">
+                <div class="header-logo">
+                    <div class="header-image">
+                        <a href="main.html"><img src="spinner.gif" alt="spinner" /></a>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1>The Decision Spinner</h1>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-container-q">
+                <h1>Make your own decision</h1>
+                <form action="listOfUserQuestions.html" method="GET">
+                    <div class="form">
+                        <p>You can create new decisions here!</p>
+                        <p>Question:<input type="text" name="question" value="" id="question"></p>
+                        <p>Option 1:<input type="text" name="option1" value="" id="one"></p>
+                        <p>Option 2:<input type="text" name="option2" value="" id="two"></p>
+                        <p>Option 3:<input type="text" name="option3" value="" id="three"></p>
+                        <p>Option 4:<input type="text" name="option4" value="" id="four"></p>
+                        <p><input type="submit" name="submit" value="Submit" id="submit" class="button" onclick="saveTextAsFile()"></p>
+                        <!--<a href="listOfUserQuestions.html" class="button" class="button_user">Submit Decision</a>-->
+                        <a href="listOfUserQuestions.html" class="button" id="goBack">Go Back</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <p>Share Your Experience On:
+                        <a href="https://www.facebook.com/"><img class="facebook" src="facebook.png" alt="facebook" /></a>
+                        <a href="https://www.instagram.com/"><img class="instagram" src="instagram.png" alt="instagram" /></a>
+                        <a href="https://twitter.com/"><img class="twitter" src="twitter.png" alt="twitter" /></a>
+                    </p>
+                    <p>Developed by Mark Gowans, Olufemi Olusina and Grayson Orr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
