@@ -1,4 +1,5 @@
 			function saveTextAsFile() {
+			    var recentQuestion = document.getElementById("question").value;
 			    var textToSave = document.getElementById("question").value + "?" + document.getElementById("one").value + "?" + document.getElementById("two").value + "?" +
 			        document.getElementById("three").value + "?" + document.getElementById("four").value;
 			    var textToSaveAsBlob = new Blob([textToSave], { type: "text/plain" });
@@ -35,5 +36,3 @@
 			    };
 			    fileReader.readAsText(fileToLoad, "UTF-8");
 			}
-
-			var fileNameToSaveAs = window.parent.recentQuestion;

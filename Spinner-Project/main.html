@@ -8,9 +8,16 @@
     <link href="main.css" rel="stylesheet">
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <meta property="og:url" content="http://olusinae.github.io/Spinner-Project/main.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Software Engineering | Decision Spinner" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image" content="favicon.png" />
+
 </head>
 
-<body>
+<body onload="myFunction()">
     <div class="container">
         <div class="header">
             <div class="header-container">
@@ -26,19 +33,53 @@
         </div>
         <div class="content">
             <div class="content-container">
+
+                <script>
+                    function myFunction() {
+                        var person = prompt("Please enter your name", "Harry Potter");
+
+                        if (person != null) {
+                            var q = document.getElementById("demo").innerHTML =
+                                "Hello " + person + "! How are you today?";
+                        }
+                    }
+                </script>
+
+                <p id="demo"></p>
+
                 <h1>About Us</h1>
                 <p>Making decisions is something humans do without thought, without hesitation,<br> without worry every single minute of the day. In those moments when something<br> hangs in the balance, we are constantly hesitatating, self-doubting and<br>                    fearing our decisions we make.</p>
                 <p>Remember we are good at making decisions, after all us humans are making decisions<br> from the moment we wake up to the moment we go to bed.</p>
                 <p>Software Engineering students; Mark Gowans, Olufemi Olusina and Grayson Orr have<br> developed a small "Decision Making" web application which will help you make decisions<br> on everyday activities such as "What should I have for breakfast?"
                     or <br> "How long will I nap for after Polytechnic?".</p>
-                <p><a href="buttons.html" class="button">Try Here</a></p>
+                <p><a href="buttons.html" class="button" id="tryHere">Try Here</a></p>
             </div>
         </div>
+
+
+
+
         <div class="footer">
             <div class="footer-container">
                 <div class="footer-center">
+                    <!-- Load Facebook SDK for JavaScript -->
+                    <div id="fb-root"></div>
+                    <script>
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+
+                    <!-- Your share button code -->
+                    <div class="fb-share-button" data-href="http://olusinae.github.io/Spinner-Project/main.html" data-layout="button_count">
+                    </div>
                     <p>Share Your Experience On:
-                        <a href="https://www.facebook.com/"><img class="facebook" src="facebook.png" alt="facebook" /></a>
+                        <a href="https://www.facebook.com/"><img class="facebook" src="facebook.png" alt="facebook" id="shareBtn" /></a>
                         <a href="https://www.instagram.com/"><img class="instagram" src="instagram.png" alt="instagram" /></a>
                         <a href="https://twitter.com/"><img class="twitter" src="twitter.png" alt="twitter" /></a>
                     </p>
@@ -46,6 +87,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </body>
 

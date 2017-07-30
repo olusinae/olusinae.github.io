@@ -269,3 +269,7 @@ text {
 #submit {
     width: 250px;
 }
+
+p#demo {
+    margin-top: -12px;
+}
