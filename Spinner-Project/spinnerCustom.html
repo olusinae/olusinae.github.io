@@ -28,7 +28,18 @@
         </div>
         <div class="content">
             <div class="content-container-question">
-                <h1>Custom Question</h1>
+                <h1>
+                    <script>
+                        input1 = prompt("Please enter Question");
+
+                        if (input1 == null) {
+                            document.write("Please enter your question");
+                        } else {
+                            document.write(input1);
+                        }
+                    </script>
+                </h1>
+
                 <div id="chart"></div>
                 <div id="question">
                     <h1></h1>
@@ -48,22 +59,31 @@
                             oldpick = [],
                             color = d3.scale.category20();
 
+
+
+                        input2 = prompt("Please enter Option 1");
+                        input3 = prompt("Please enter Option 2");
+                        input4 = prompt("Please enter Option 3");
+                        input5 = prompt("Please enter Option 4");
+
+
+
                         var data = [{
-                            "label": "Custom Option 1",
+                            "label": input2,
                             "value": 1,
-                            "question": "How does *Custom Option 1* sound?"
+                            "question": "How does " + input2 + " sound?"
                         }, {
-                            "label": "Custom Option 2",
+                            "label": input3,
                             "value": 1,
-                            "question": "How does *Custom Option 2* sound?"
+                            "question": "How does " + input3 + "  sound?"
                         }, {
-                            "label": "Custom Option 3",
+                            "label": input4,
                             "value": 1,
-                            "question": "How does *Custom Option 3* sound?"
+                            "question": "How does " + input4 + "  sound?"
                         }, {
-                            "label": "Custom Option 4",
+                            "label": input5,
                             "value": 1,
-                            "question": "How does *Custom Option 4* sound?"
+                            "question": "How does " + input5 + "  sound?"
                         }];
 
                         var svg = d3.select('#chart')
@@ -174,7 +194,7 @@
                         container.append("circle")
                             .attr("cx", 0)
                             .attr("cy", 0)
-                            .attr("r", 40)
+                            .attr("r", 50)
                             .style({
                                 "fill": "white",
                                 "cursor": "pointer"
